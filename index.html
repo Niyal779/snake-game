@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>SNAKE // NEON</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper" id="wrapper">
+
+  <div class="side-left" id="sideLeft">
+
+    <div class="title">SN<span>AK</span>E</div>
+
+    <!-- HUD Stats -->
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-label">Score</div>
+        <div class="stat-value" id="scoreDisplay">0000</div>
+      </div>
+      <div class="stat-box stat-cyan">
+        <div class="stat-label">Best</div>
+        <div class="stat-value cyan" id="bestDisplay">0000</div>
+      </div>
+      <div class="stat-box stat-yellow">
+        <div class="stat-label">Lv</div>
+        <div class="stat-value yellow" id="levelDisplay">01</div>
+      </div>
+    </div>
+
+    <!-- D-Pad (mobile) -->
+    <div class="dpad-wrap" id="dpadWrap">
+      <div class="dpad">
+        <div class="dpad-btn empty"></div>
+        <div class="dpad-btn" id="btnUp">▲</div>
+        <div class="dpad-btn empty"></div>
+        <div class="dpad-btn" id="btnLeft">◀</div>
+        <div class="dpad-btn pause-btn" id="btnPause">❚❚</div>
+        <div class="dpad-btn" id="btnRight">▶</div>
+        <div class="dpad-btn empty"></div>
+        <div class="dpad-btn" id="btnDown">▼</div>
+        <div class="dpad-btn empty"></div>
+      </div>
+      <div class="dpad-hint">SWIPE SCREEN &nbsp;·&nbsp; TAP ❚❚ TO PAUSE</div>
+    </div>
+
+    <!-- Keyboard hint (desktop) -->
+    <div class="kb-hint">
+      <span class="key">W</span><span class="key">A</span><span class="key">S</span><span class="key">D</span>
+      / Arrows &nbsp;·&nbsp; <span class="key">P</span> pause &nbsp;·&nbsp; <span class="key">Space</span> start
+    </div>
+
+  </div><!-- /side-left -->
+
+  <!-- Game Canvas -->
+  <div class="canvas-wrap" id="canvasWrap">
+    <canvas id="gameCanvas"></canvas>
+    <div class="scanlines"></div>
+
+    <!-- Start / Game Over Overlay -->
+    <div class="overlay" id="overlay">
+      <div class="overlay-title" id="overlayTitle">SNAKE // NEON</div>
+      <div class="overlay-sub" id="overlaySub">
+        Guide the serpent.<br>Consume. Grow. Survive.
+      </div>
+      <button class="btn" id="startBtn">START</button>
+    </div>
+  </div><!-- /canvas-wrap -->
+
+</div><!-- /wrapper -->
+
+<!-- Footer -->
+<footer class="footer">
+  DEVELOPED BY &nbsp;
+  <a href="https://www.facebook.com/niyalrahaman" target="_blank" rel="noopener" class="footer-link">
+    NIYAL RAHAMAN
+  </a>
+</footer>
+
+<script src="game.js"></script>
+</body>
+</html>
